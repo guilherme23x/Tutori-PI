@@ -1,24 +1,23 @@
+# api/index.py - Versão Final (Pedro + Lucas)
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from supabase import create_client, Client
 from pydantic import BaseModel
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
-
-# Configuração da conexão Supabase
+# Configuração do Supabase (Lê variáveis do ambiente Vercel)
 SUPABASE_URL = os.environ.get("SUPABASE_URL")
 SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
 
 if SUPABASE_URL and SUPABASE_KEY:
     supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 else:
-    # Retorno de fallback para desenvolvimento local
+    # Fallback para ambiente local/dev ou erro
     supabase = None
 
 app = FastAPI()
 
+# Configuração de CORS
 origins = ["*"]
 
 app.add_middleware(
@@ -29,29 +28,61 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Lucas deve definir a classe Mentor aqui (Parte 2)
+# ============================================================================
+# MODELO DE DADOS - Implementado por Lucas
+# ============================================================================
 
-# Rota principal de busca com lógica de filtros
-@app.get("/api/mentors")
+class Mentor(BaseModel):
+    """
+    Modelo de dados do Mentor.
+    Define a estrutura dos dados retornados pela API.
+    """
+    id: int
+    name: str
+    subject: str
+    price: float
+    bio: str
+    verified: bool
+    rating: float
+    image_url: str
+
+
+# ============================================================================
+# ROTAS - Implementadas por Pedro e Lucas
+# ============================================================================
+
+@app.get("/api/mentors", response_model=list[Mentor])
 def get_mentors(subject: str = None, verified: bool = None, max_price: float = None):
+    """
+    Busca mentores com filtros opcionais.
+    Implementado por Pedro.
+    """
     if not supabase:
         return []
 
     query = supabase.table("mentors").select("*")
 
     if subject:
-        # Pedro: Implementa a busca parcial (case-insensitive)
         query = query.ilike("subject", f"%{subject}%")
 
     if verified is not None:
-        # Pedro: Implementa o filtro de verificação
         query = query.eq("verified", verified)
 
     if max_price:
-        # Pedro: Implementa o filtro de preço máximo
         query = query.lte("price", max_price)
 
     response = query.execute()
     return response.data
 
-# Lucas deve adicionar a rota de perfil get_mentor_by_id aqui (Parte 2)
+
+@app.get("/api/mentors/{mentor_id}", response_model=Mentor)
+def get_mentor_by_id(mentor_id: int):
+    """
+    Busca um mentor específico por ID.
+    Implementado por Lucas.
+    """
+    if not supabase:
+        return {}
+
+    response = supabase.table("mentors").select("*").eq("id", mentor_id).single().execute()
+    return response.data
