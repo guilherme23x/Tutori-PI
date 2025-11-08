@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil do Mentor - Tutori</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <header class="headerGlobal">
+      <div class="container headerContainer">
+        <div class="logo">Tutori</div>
+        <nav class="navMenu">
+          <a href="../index.html" id="nav-home" class="navLink">Home</a>
+          <a href="search.html" id="nav-mentors" class="navLink"
+            >Encontrar Mentores</a
+          >
+          <a href="history.html" id="nav-history" class="navLink">Histórico</a>
+        </nav>
+        <div class="headerAuth">
+          <button class="btn btnPrimary" id="header-signup-button">
+            Começar
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mainWrapper">
+      <main>
+        <section id="page-mentor-profile" class="pageSection">
+          <div class="container profileLayout">
+            <div id="profile-details-area" class="profileDetails">
+              <div class="card card-shadcn p-8 text-center">
+                <p class="text-lg text-gray-500">
+                  Carregando perfil do mentor...
+                </p>
+              </div>
+            </div>
+
+            <div class="profileSidebar">
+              <div class="card scheduleCard">
+                <div class="schedulePriceBox">
+                  <p class="schedulePriceValue">R$ 250</p>
+                  <p class="schedulePriceUnit">por hora</p>
+                </div>
+                <ul class="scheduleBenefits">
+                  <li class="scheduleBenefitItem">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    Sessões de 60 minutos
+                  </li>
+                  <li class="scheduleBenefitItem">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                      <line x1="3" x2="21" y1="10" y2="10" />
+                    </svg>
+                    Reunião por vídeo
+                  </li>
+                  <li class="scheduleBenefitItem">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"
+                      />
+                      <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                    Material de apoio incluso
+                  </li>
+                  <li class="scheduleBenefitItem">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M5 22V1c0-1.2 0.8-2 2-2h10c1.2 0 2 0.8 2 2v21" />
+                      <path d="M10 5h4" />
+                      <path d="M12 15h.01" />
+                      <path d="M12 18h.01" />
+                    </svg>
+                    Garantia de reembolso
+                  </li>
+                </ul>
+
+                <div class="scheduleButtons">
+                  <button
+                    class="btn btnPrimary btnLarge btnFullWidth"
+                    id="schedule-and-pay-button"
+                    disabled
+                  >
+                    Agendar Sessão
+                  </button>
+                  <button class="btn btnSecondary btnLarge btnFullWidth">
+                    Sessão Experimental (15min)
+                  </button>
+                </div>
+
+                <div class="scheduleSection">
+                  <h3 class="scheduleSectionTitle">Selecione uma Data</h3>
+                  <div id="calendar-widget" class="calendarWidget"></div>
+                </div>
+
+                <div class="scheduleSection">
+                  <h3 class="scheduleSectionTitle">Horários Disponíveis</h3>
+                  <div
+                    id="available-times-container"
+                    class="timeSlotsGrid"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footerGlobal">
+      <p>© 2025 Tutori. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

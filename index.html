@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutori - Plataforma de Mentoria</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="headerGlobal">
+    <div class="container headerContainer">
+      <div class="logo">Tutori</div>
+      <nav class="navMenu">
+        <a href="index.html" id="nav-home" class="navLink">Home</a>
+        <a href="pages/search.html" id="nav-mentors" class="navLink">Encontrar Mentores</a>
+        <a href="pages/history.html" id="nav-history" class="navLink">Histórico</a>
+      </nav>
+      <div class="headerAuth">
+        <button class="btn btnPrimary" id="header-signup-button">
+          Começar
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mainWrapper">
+    <main>
+      <section id="page-home">
+        <div class="container heroSection">
+          <div class="heroContent">
+            <p class="heroPreTitle">
+              <span>★</span> Mais de 1.000+ especialistas
+            </p>
+            <h1 class="heroTitle">
+              Encontre o <span class="heroTitleHighlight">Mentor Ideal</span>
+              para Sua Jornada
+            </h1>
+            <p class="heroSubtitle">
+              Conecte-se com especialistas de diversas áreas e acelere seu
+              crescimento profissional através de mentorias personalizadas e
+              transformadoras.
+            </p>
+            <div class="heroButtons">
+              <button class="btn btnPrimary btnLarge" id="view-all-mentors">
+                Explorar Mentores →
+              </button>
+              <a href="#" class="btn btnSecondary btnLarge">Seja um Mentor</a>
+            </div>
+            <div class="heroStats">
+              <div class="heroStatItem">
+                <span class="heroStatValue">15+</span>
+                <span class="heroStatLabel">Anos de Experiência</span>
+              </div>
+              <div class="heroStatItem">
+                <span class="heroStatValue">5.000+</span>
+                <span class="heroStatLabel">Sessões Realizadas</span>
+              </div>
+              <div class="heroStatItem">
+                <span class="heroStatValue">98%</span>
+                <span class="heroStatLabel">Satisfação</span>
+              </div>
+              <div class="heroStatItem">
+                <span class="heroStatValue">4.9</span>
+                <span class="heroStatLabel">Avaliação Média</span>
+              </div>
+            </div>
+          </div>
+          <div class="heroImageContainer">
+            <div class="heroImageBadge">4.9 Avaliação Média</div>
+          </div>
+        </div>
+        <div class="container">
+          <div id="home-error-container" class="searchErrorContainer hidden"></div>
+        </div>
+
+        <div class="homeSection homeSectionAlt">
+          <div class="container">
+            <h2 class="sectionTitle">
+              Por Que Escolher
+              <span class="heroTitleHighlight">Tutori</span>?
+            </h2>
+            <p class="sectionSubtitle">
+              Uma plataforma completa para conectar você aos melhores mentores
+              do mercado
+            </p>
+            <div class="valuePropsGrid">
+              <div class="card valuePropCard">
+                <div class="valuePropIcon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </div>
+                <h3 class="valuePropTitle">Mentores Qualificados</h3>
+                <p class="valuePropDescription">
+                  Profissionais experientes de diversas áreas prontos para
+                  compartilhar conhecimento
+                </p>
+              </div>
+              <div class="card valuePropCard">
+                <div class="valuePropIcon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                    <line x1="16" x2="16" y1="2" y2="6" />
+                    <line x1="8" x2="8" y1="2" y2="6" />
+                    <line x1="3" x2="21" y1="10" y2="10" />
+                  </svg>
+                </div>
+                <h3 class="valuePropTitle">Agendamento Fácil</h3>
+                <p class="valuePropDescription">
+                  Sistema inteligente de agendamento que se adapta à sua
+                  rotina
+                </p>
+              </div>
+              <div class="card valuePropCard">
+                <div class="valuePropIcon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M9 10L15 10" />
+                    <path d="M12 7V17" />
+                  </svg>
+                </div>
+                <h3 class="valuePropTitle">Reuniões Online</h3>
+                <p class="valuePropDescription">
+                  Plataforma integrada para sessões de mentoria por vídeo
+                </p>
+              </div>
+              <div class="card valuePropCard">
+                <div class="valuePropIcon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="14" x="2" y="6" rx="2" />
+                    <path d="M17 10h.01" />
+                    <path d="M7 15h.01" />
+                    <path d="M7 11h.01" />
+                    <path d="M17 15h.01" />
+                  </svg>
+                </div>
+                <h3 class="valuePropTitle">Pagamento Seguro</h3>
+                <p class="valuePropDescription">
+                  Transações protegidas e garantia de reembolso
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="homeSection">
+          <div class="container">
+            <h2 class="sectionTitle">
+              Como <span class="heroTitleHighlight">Funciona</span>
+            </h2>
+            <p class="sectionSubtitle">
+              Em apenas 4 passos simples, você estará conectado com o mentor
+              perfeito
+            </p>
+
+            <div class="stepsGrid">
+              <div class="stepCard">
+                <div class="stepIconWrapper">
+                  <span class="stepNumber">1</span>
+                  <div class="stepIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="m21 21-4.3-4.3" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="stepTitle">Encontre Seu Mentor</h3>
+                <p class="stepDescription">
+                  Browse uma lista detalhada de mentores especializados em
+                  diversas áreas
+                </p>
+              </div>
+              <div class="stepCard">
+                <div class="stepIconWrapper">
+                  <span class="stepNumber">2</span>
+                  <div class="stepIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="stepTitle">Escolha o Perfil Ideal</h3>
+                <p class="stepDescription">
+                  Veja especialidades, avaliações e disponibilidade antes de
+                  decidir
+                </p>
+              </div>
+              <div class="stepCard">
+                <div class="stepIconWrapper">
+                  <span class="stepNumber">3</span>
+                  <div class="stepIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                      <line x1="16" x2="16" y1="2" y2="6" />
+                      <line x1="8" x2="8" y1="2" y2="6" />
+                      <line x1="3" x2="21" y1="10" y2="10" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="stepTitle">Agende sua Sessão</h3>
+                <p class="stepDescription">
+                  Gerencie horários, faça o pagamento para você e seu mentor
+                </p>
+              </div>
+              <div class="stepCard">
+                <div class="stepIconWrapper">
+                  <span class="stepNumber">4</span>
+                  <div class="stepIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M17.5 19H9a7 7 0 1 1 6.71-9h.79a4.5 4.5 0 1 1 0 9H17.5" />
+                      <path d="m3 19 6-6 4 4 6-6" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="stepTitle">Comece a Aprender</h3>
+                <p class="stepDescription">
+                  Participe das reuniões, conheça os educadores e acelere seu
+                  crescimento
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footerGlobal">
+    <p>© 2025 Tutori. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

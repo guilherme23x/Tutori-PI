@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagamento - Tutori</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <header class="headerGlobal">
+      <div class="container headerContainer">
+        <div class="logo">Tutori</div>
+        <nav class="navMenu">
+          <a href="../index.html" id="nav-home" class="navLink">Home</a>
+          <a href="search.html" id="nav-mentors" class="navLink"
+            >Encontrar Mentores</a
+          >
+          <a href="history.html" id="nav-history" class="navLink">Histórico</a>
+        </nav>
+        <div class="headerAuth">
+          <button class="btn btnPrimary" id="header-signup-button">
+            Começar
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mainWrapper">
+      <main>
+        <section id="page-payment" class="pageSection">
+          <div class="paymentLayout">
+            <div class="paymentFormColumn">
+              <a href="#" id="back-to-schedule" class="paymentBackLink">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m15 18-6-6 6-6" />
+                </svg>
+                Voltar
+              </a>
+              <div class="card paymentFormCard">
+                <h2 class="paymentFormTitle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect width="20" height="14" x="2" y="6" rx="2" />
+                    <path d="M17 10h.01" />
+                    <path d="M7 15h.01" />
+                    <path d="M7 11h.01" />
+                    <path d="M17 15h.01" />
+                  </svg>
+                  Pagamento 100% seguro
+                </h2>
+
+                <div class="formGroup">
+                  <label class="formLabel">Nome no Cartão</label>
+                  <input
+                    type="text"
+                    placeholder="Seu nome completo"
+                    class="formInput"
+                    required
+                  />
+                </div>
+                <div class="formGroup">
+                  <label class="formLabel">Número do Cartão</label>
+                  <input
+                    type="text"
+                    placeholder="XXXX XXXX XXXX XXXX"
+                    class="formInput"
+                    required
+                  />
+                </div>
+                <div class="paymentFormGrid">
+                  <div class="formGroup">
+                    <label class="formLabel">Validade (MM/AA)</label>
+                    <input
+                      type="text"
+                      placeholder="MM/AA"
+                      class="formInput"
+                      required
+                    />
+                  </div>
+                  <div class="formGroup">
+                    <label class="formLabel">CVV</label>
+                    <input
+                      type="text"
+                      placeholder="123"
+                      class="formInput"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="paymentGuarantees">
+                  <div class="paymentGuaranteeItem">
+                    <span>✓</span> Seus dados são criptografados e protegidos
+                  </div>
+                  <div class="paymentGuaranteeItem">
+                    <span>✓</span> Garantia de reembolso total em até 24h antes
+                    da sessão
+                  </div>
+                  <div class="paymentGuaranteeItem">
+                    <span>✓</span> Confirmação por email com link da reunião
+                  </div>
+                </div>
+
+                <button
+                  class="btn btnPrimary btnLarge btnFullWidth"
+                  id="finalize-payment-button"
+                >
+                  Confirmar Pagamento
+                </button>
+              </div>
+            </div>
+
+            <div class="paymentSummaryColumn">
+              <div class="card paymentSummaryCard">
+                <h3 class="paymentSummaryTitle">Detalhes da Sessão</h3>
+                <div class="summaryMentorInfo">
+                  <img
+                    src="https://placehold.co/60x60/E8634E/FFFFFF?text=..."
+                    alt="Mentor"
+                    class="summaryMentorAvatar"
+                  />
+                  <div>
+                    <p id="payment-mentor-name" class="summaryMentorName">
+                      Carregando...
+                    </p>
+                    <p id="payment-mentor-subject" class="summaryMentorSubject">
+                      ...
+                    </p>
+                  </div>
+                </div>
+                <div class="summaryDetailsList">
+                  <div class="summaryDetailItem">
+                    <span>Data:</span>
+                    <span id="payment-date-time">...</span>
+                  </div>
+                  <div class="summaryDetailItem">
+                    <span>Horário:</span>
+                    <span id="payment-time">...</span>
+                  </div>
+                  <div class="summaryDetailItem">
+                    <span>Duração:</span>
+                    <span>60 minutos</span>
+                  </div>
+                </div>
+                <div class="summaryTotal">
+                  <span class="summaryTotalLabel">Total:</span>
+                  <span class="summaryTotalPrice" id="payment-price-value"
+                    >R$ ...</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footerGlobal">
+      <p>© 2025 Tutori. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
