@@ -2,6 +2,11 @@
 
 Este projeto é a Prova de Conceito (PoC) da plataforma Tutori, desenvolvida para o Projeto Integrador do Quarto Semestre de TADS/TSI. A PoC implementa a jornada principal de **Busca e Agendamento de um Mentor**.
 
+## 🔗 Links Principais
+
+* **Site Deployado (Prova de Conceito):** https://tutori-pi.vercel.app/
+* **Vídeo de Apresentação (YouTube):** https://www.youtube.com/watch?v=LSXr-9POhOA
+  
 ## 👥 Integrantes da Equipe
 
 | **Nome do Aluno** | **Contribuição Principal (PoC)** |
